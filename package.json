@@ -1,0 +1,30 @@
+{
+  "name": "backend-graphql",
+  "version": "1.0.0",
+  "description": "GraphQL API server for coding test",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/src/server.js",
+    "dev": "tsx watch src/server.ts",
+    "test": "npm run build && node --test dist/tests/node-query.test.js",
+    "generate:token": "npm run build && node dist/scripts/generate-token.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/server": "^4.11.1",
+    "graphql": "^16.8.1",
+    "graphql-scalars": "^1.22.5",
+    "graphql-tag": "^2.12.6",
+    "graphql-type-json": "^0.3.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20.12.12",
+    "tsx": "^4.15.7",
+    "typescript": "^5.4.5"
+  }
+}
