@@ -1,8 +1,8 @@
-# Backend GraphQL Coding Test
+# Backend GraphQL API
 
 ## Overview
 
-This project implements the coding test requirements using TypeScript, Apollo Server, and the provided JSON files as the persistent data source. The API exposes the `node` query with nested relationships between nodes, triggers, responses, actions, and resource templates.
+This project implements a GraphQL API using TypeScript, Apollo Server, and the provided JSON files as the persistent data source. The API exposes the `node` query with nested relationships between nodes, triggers, responses, actions, and resource templates.
 
 ## Prerequisites
 
@@ -47,19 +47,19 @@ npm run dev
 
 ## Authentication
 
-All requests must include a Bearer token in the `Authorization` header. A ready-to-use token (expires approximately two hours after generation) is provided below:
+All requests must include a Bearer token in the `Authorization` header. Example:
 
 ```
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjb2RpbmctdGVzdC11c2VyIiwibmFtZSI6IkdyYXBoUUwgQVBJIFRlc3RlciIsImlhdCI6MTc1ODkwMTU3MiwiZXhwIjoxNzU4OTA4NzcyfQ.-cmNtz9f0b8nV_IqSEWPP7wYasCfjp4GGrdHkJttOu0
+Authorization: Bearer YOUR_JWT_TOKEN
 ```
 
-To generate a fresh token at any time:
+Generate a new token anytime with:
 
 ```powershell
 npm run generate:token
 ```
 
-Set `JWT_SECRET` before running the script if you need a custom secret or expiry options.
+Ensure `JWT_SECRET` in your environment matches the secret used to sign tokens.
 
 ## Example Query
 
@@ -99,7 +99,7 @@ query Node($nodeId: ID!) {
 npm test
 ```
 
-The tests cover authentication and a GraphQL integration smoke test for the `node` query.
+This runs the automated checks for authentication and the `node` query.
 
 ## Project Structure
 
