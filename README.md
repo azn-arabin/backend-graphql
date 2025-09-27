@@ -27,7 +27,8 @@ Then customise the values as needed (for non-Windows shells, use `cp .env.exampl
 ## Installation
 
 ```powershell
-cd "c:\Users\Arabin\Desktop\Projects\My Project\backend-graphql"
+git clone https://github.com/azn-arabin/backend-graphql.git
+cd backend-graphql
 npm install
 ```
 
