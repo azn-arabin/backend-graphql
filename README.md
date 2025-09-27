@@ -16,6 +16,14 @@ This project implements the coding test requirements using TypeScript, Apollo Se
 | `PORT`       | `4000`             | Port where the GraphQL server listens          |
 | `JWT_SECRET` | `dev-super-secret` | Secret used to sign and verify JSON Web Tokens |
 
+Copy `.env.example` to `.env` before running the server:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Then customise the values as needed (for non-Windows shells, use `cp .env.example .env`). `dotenv` loads these variables automatically when the server starts.
+
 ## Installation
 
 ```powershell
@@ -98,4 +106,4 @@ The tests cover authentication and a GraphQL integration smoke test for the `nod
 - `src/` – GraphQL schema, resolvers, authentication helper, and server bootstrap.
 - `scripts/` – CLI utilities (e.g., JWT generation).
 - `tests/` – Automated checks executed with `node --test`.
-- JSON files at the project root serve as the data source.
+- `data/` – JSON datasets acting as the backing store for nodes, triggers, responses, actions, and resource templates.

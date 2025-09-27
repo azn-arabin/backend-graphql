@@ -44,9 +44,4 @@ uploads/
 # Delete user script
 
 # Random files
-node.json
-action.json
-resourceTemplate.json
-response.json
-trigger.json
 *.pdf

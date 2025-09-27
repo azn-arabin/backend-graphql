@@ -4,6 +4,9 @@ import resolvers from "./resolvers.js";
 import typeDefs from "./typeDefs.js";
 import { authenticate } from "./auth.js";
 import type { GraphQLContext } from "./types.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 async function startServer(): Promise<void> {
   const server = new ApolloServer<GraphQLContext>({

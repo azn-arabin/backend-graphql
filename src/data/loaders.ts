@@ -9,6 +9,8 @@ import type {
   Trigger,
 } from "../types.js";
 
+const DATA_DIR = path.resolve(process.cwd(), "data");
+
 const DATA_FILES = {
   nodes: "node.json",
   responses: "response.json",
@@ -18,7 +20,7 @@ const DATA_FILES = {
 } as const;
 
 function readJson<T>(fileName: string): T {
-  const filePath = path.resolve(process.cwd(), fileName);
+  const filePath = path.join(DATA_DIR, fileName);
   const raw = fs.readFileSync(filePath, "utf-8");
   return JSON.parse(raw) as T;
 }

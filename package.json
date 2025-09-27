@@ -11,20 +11,21 @@
     "generate:token": "npm run build && node dist/scripts/generate-token.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Md. Asaduzzman Arabin",
   "license": "MIT",
   "dependencies": {
-    "@apollo/server": "^4.11.1",
-    "graphql": "^16.8.1",
-    "graphql-scalars": "^1.22.5",
+    "@apollo/server": "^5.0.0",
+    "dotenv": "^17.2.2",
+    "graphql": "^16.11.0",
+    "graphql-scalars": "^1.24.2",
     "graphql-tag": "^2.12.6",
     "graphql-type-json": "^0.3.2",
     "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
-    "@types/jsonwebtoken": "^9.0.5",
-    "@types/node": "^20.12.12",
-    "tsx": "^4.15.7",
-    "typescript": "^5.4.5"
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.5.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.2"
   }
 }
